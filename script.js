@@ -114,9 +114,9 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
             weatherCardsDiv.innerHTML = "";
 
             // Obtenir l'heure locale à partir de TimezoneDB API
-            const TIMEZONEDB_API_URL = `http://api.timezonedb.com/v2.1/get-time-zone?key=${TIMEZONEDB_API_KEY}&format=json&by=position&lat=${latitude}&lng=${longitude}`;
+        const url = 'https://api.timezonedb.com/v2.1/get-time-zone?key=5PNN0OQUYS1C&format=json&by=position&lat=14.693425&lng=-17.447938';
 
-            fetch(TIMEZONEDB_API_URL)
+            fetch(url)
                 .then(response => response.json())
                 .then(timezoneData => {
                     const localDateTime = new Date(timezoneData.formatted);
